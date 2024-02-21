@@ -1,0 +1,8 @@
+{
+     "label": "文章",
+     "position": 2,
+     "link": {
+          "type": "doc",
+          "id": "article"
+     }
+}

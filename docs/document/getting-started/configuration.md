@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# 配置
 
 Documents are **groups of pages** connected through:
 
@@ -43,8 +43,8 @@ It is also possible to create your sidebar explicitly in `sidebars.js`:
 
 ```js title="sidebars.js"
 export default {
-  tutorialSidebar: [
-    'intro',
+  documentSidebar: [
+    'introduction',
     // highlight-next-line
     'hello',
     {
