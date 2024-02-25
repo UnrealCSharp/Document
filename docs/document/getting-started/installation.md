@@ -1,43 +1,53 @@
 ---
 sidebar_position: 1
+custom_edit_url: null
 ---
 
 # 安装流程
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+如何从零开始生成一个C#工程
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
+---
 
-## Create your first React Page
+## 环境依赖
 
-Create a file at `src/pages/my-react-page.js`:
+- .NET 7及以上版本
+  - Windows上可通过Visual Studio Installer直接安装
+  - macOS上可参考[Install .NET on macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
+- [Mono](https://github.com/dotnet/runtime)，插件已内置
 
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
+---
 
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
+## 推荐IDE
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+- [Visual Studio](https://visualstudio.microsoft.com/)
+- [Rider](https://www.jetbrains.com/rider/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-## Create your first Markdown Page
+---
 
-Create a file at `src/pages/my-markdown-page.md`:
+## 安装插件
 
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
+- 源码安装方式
+  - `git clone https://github.com/crazytuzi/UnrealCSharp`
+  - 拷贝到`项目`的`Plugins`目录
+- 发布包安装方式
+  - 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
+  - 拷贝到`项目`的`Plugins`目录
+- 子模块（推荐）
+  - [git-submodule](https://git-scm.com/docs/git-submodule)
 
-This is a Markdown page
-```
+---
 
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+## 配置导出项
+
+- 参考[配置](configuration.md)
+
+---
+
+## 生成C#工程
+
+- 点击`Generator Code`
+- `项目/Script`即为C#工程目录
+
+---
