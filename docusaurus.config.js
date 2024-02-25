@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'UnrealCSharp',
-  tagline: 'Dinosaurs are cool',
+  tagline: '基于.Net7（Mono）的UE下C#编程插件',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -95,7 +95,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} UnrealCSharp, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} UnrealCSharp. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

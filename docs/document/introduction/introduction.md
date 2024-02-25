@@ -1,43 +1,9 @@
+---
+custom_edit_url: null
+---
+
 # UnrealCSharp 介绍
 
-Let's discover **Docusaurus in less than 5 minutes**.
+&ensp;&ensp;&ensp;&ensp;UnrealCSharp是UE下C#编程插件，基于.Net7（Mono），支持全部的反射类型，自动生成C#代码，能够静态导出各种数据类型和函数，同时拥有强大的动态类特性，可以通过C#直接生成UClass，UStruct和UEnum，并且不需要对应的蓝图载体。目前已适配Windows，macOS，Linux，Android和IOS多个平台；支持Dedicated Server；支持Editor，Runtime和Android真机调试；能够通过Pak进行热更新；编辑器下，能够热重载C#改动，包括替换动态类。拥有完善的生态，完备的单元测试和回归测试，详细的性能测试，已经使用插件复刻了Epic提供的StackOBot和Cropout游戏示例，目前社区中已经有项目实际接入使用。
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/introduction.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+---
