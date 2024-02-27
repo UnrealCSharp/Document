@@ -15,7 +15,7 @@ const FeatureList = [
     title: '动态类',
     description: (
       <>
-        通过C#可以动态生成UClass，UStruct和UEnum，并且不需要对应的蓝图载体。
+        通过C#可以动态生成UClass，UStruct和UEnum，并且不需要蓝图载体。
       </>
     ),
   },

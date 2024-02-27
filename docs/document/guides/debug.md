@@ -26,7 +26,7 @@ custom_edit_url: null
 - Visual Studio
     - [VSMonoDebugger](https://github.com/GordianDotNet/VSMonoDebugger)
 - Rider（推荐）
-    - `Run-Edit Configurations...-Add New Configuration-.Net-Mono Remote`
+    - `Run-Edit Configurations...-Add New Configuration-.NET-Mono Remote`
 - Visual Studio Code
     - [vscode-mono-debug](https://github.com/microsoft/vscode-mono-debug)
 
