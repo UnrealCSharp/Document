@@ -87,6 +87,12 @@ const config = {
             label: '社区',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'updateSidebar',
+            position: 'left',
+            label: '更新',
+          },
+          {
             href: 'https://github.com/crazytuzi/UnrealCSharp',
             label: 'GitHub',
             position: 'right',
