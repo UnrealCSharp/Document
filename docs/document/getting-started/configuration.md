@@ -25,6 +25,7 @@ custom_edit_url: null
       - CoreUObject
       - Engine
       - SlateCore
+      - FieldNotification
       - UMG
       - `项目`
   - SupportedAssetPath，需要对资源生成C#代码的模块或者插件
