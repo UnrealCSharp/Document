@@ -1,6 +1,4 @@
 {
-     "label": "交流方式",
-     "position": 1,
      "link": {
           "type": "doc",
           "id": "communication"

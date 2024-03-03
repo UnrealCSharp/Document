@@ -1,13 +1,14 @@
 ---
+title: 动态类
+description: 不需要蓝图载体的动态类
+hide_title: true
+slug: dynamic
 sidebar_position: 6
 custom_edit_url: null
 ---
 
-# 动态类
-
-不需要蓝图载体的动态类
-
----
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 介绍
 
@@ -29,6 +30,10 @@ custom_edit_url: null
 
 <summary>示例：变量</summary>
 
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
 ```csharp
 [UProperty]
 public int Value
@@ -41,6 +46,10 @@ public int Value
 private static uint __Value = 0;
 ```
 
+</TabItem>
+
+</Tabs>
+
 </details>
 
 ---
@@ -52,6 +61,10 @@ private static uint __Value = 0;
 <details>
 
 <summary>示例：函数</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
 
 ```csharp
 [UFunction, BlueprintCallable, BlueprintNativeEvent]
@@ -73,6 +86,10 @@ public void OutInt32ValueFunction(ref int OutInt32Value)
 }
 ```
 
+</TabItem>
+
+</Tabs>
+
 </details>
 
 ---
@@ -85,8 +102,11 @@ public void OutInt32ValueFunction(ref int OutInt32Value)
 
 <summary>示例：UEnum</summary>
 
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
 ```csharp
-using Script.Common;
 using Script.Dynamic;
 
 namespace Script.CoreUObject
@@ -102,6 +122,10 @@ namespace Script.CoreUObject
 }
 ```
 
+</TabItem>
+
+</Tabs>
+
 </details>
 
 ---
@@ -114,8 +138,11 @@ namespace Script.CoreUObject
 
 <summary>示例：UStruct</summary>
 
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
 ```csharp
-using Script.Common;
 using Script.Dynamic;
 using Script.Library;
 
@@ -163,6 +190,10 @@ namespace Script.CoreUObject
 }
 ```
 
+</TabItem>
+
+</Tabs>
+
 </details>
 
 ---
@@ -175,8 +206,11 @@ namespace Script.CoreUObject
 
 <summary>示例：UClass</summary>
 
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
 ```csharp
-using Script.Common;
 using Script.Dynamic;
 using Script.Engine;
 using Script.Library;
@@ -227,6 +261,10 @@ namespace Script.CoreUObject
     }
 }
 ```
+
+</TabItem>
+
+</Tabs>
 
 </details>
 

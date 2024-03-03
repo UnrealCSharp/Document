@@ -1,13 +1,14 @@
 ---
+title: 静态导出
+description: 导出未被标记反射的类，变量和函数
+hide_title: true
+slug: binding
 sidebar_position: 5
 custom_edit_url: null
 ---
 
-# 静态导出
-
-导出未被标记反射的类，变量和函数
-
----
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 介绍
 
@@ -23,24 +24,44 @@ custom_edit_url: null
 
 <summary>示例：枚举</summary>
 
-```cpp
-BINDING_REFLECTION_CLASS(ATestBindingFunctionActor)
+<Tabs>
 
-struct FRegisterTestBindingFunctionActor
+<TabItem value="raw" label="raw" default>
+
+```cpp
+enum ERawTestEnum
 {
-	FRegisterTestBindingFunctionActor()
+	RawTestEnumZero,
+	RawTestEnumOne,
+	RawTestEnumTwo
+};
+```
+
+</TabItem>
+
+<TabItem value="binding" label="binding">
+
+```cpp
+BINDING_PROJECT_ENUM(ERawTestEnum)
+
+struct FRegisterRawTestEnum
+{
+	FRegisterRawTestEnum()
 	{
-		TReflectionClassBuilder<ATestBindingFunctionActor>(NAMESPACE_BINDING)
-			.Property("Int32Value", BINDING_PROPERTY(&ATestBindingFunctionActor::Int32Value))
-			.Function("SetInt32ValueFunction", BINDING_FUNCTION(&ATestBindingFunctionActor::SetInt32ValueFunction))
-			.Function("GetInt32ValueFunction", BINDING_FUNCTION(&ATestBindingFunctionActor::GetInt32ValueFunction))
-			.Function("OutInt32ValueFunction", BINDING_FUNCTION(&ATestBindingFunctionActor::OutInt32ValueFunction))
+		TBindingEnumBuilder<ERawTestEnum>()
+			.Enumerator("RawTestEnumZero", ERawTestEnum::RawTestEnumZero)
+			.Enumerator("RawTestEnumOne", ERawTestEnum::RawTestEnumOne)
+			.Enumerator("RawTestEnumTwo", ERawTestEnum::RawTestEnumTwo)
 			.Register();
 	}
 };
 
-static FRegisterTestBindingFunctionActor RegisterTestBindingFunctionActor;
+static FRegisterRawTestEnum RegisterRawTestEnum;
 ```
+
+</TabItem>
+
+</Tabs>
 
 </details>
 
@@ -57,6 +78,65 @@ static FRegisterTestBindingFunctionActor RegisterTestBindingFunctionActor;
 - 一元操作符，`!，+，-，~，++，--`
 - 二元操作符，`+，-，*，/，%，&，|，^，<<，>>，==，!=，<，<=，>，>=`
 - 下标运算符，`[]`
+
+<details>
+
+<summary>示例：类/结构体</summary>
+
+<Tabs>
+
+<TabItem value="raw" label="raw" default>
+
+```cpp
+#pragma once
+
+class FTestBindingFunction
+{
+public:
+	FTestBindingFunction();
+
+public:
+	void SetInt32ValueFunction(int32 InInt32Value);
+
+	int32 GetInt32ValueFunction() const;
+
+	void OutInt32ValueFunction(int32& OutInt32Value) const;
+
+public:
+	int32 Int32Value;
+};
+```
+
+</TabItem>
+
+<TabItem value="binding" label="binding">
+
+```cpp
+BINDING_PROJECT_CLASS(FTestBindingFunction)
+
+struct FRegisterTestBindingFunction
+{
+	FRegisterTestBindingFunction()
+	{
+		TBindingClassBuilder<FTestBindingFunction>(NAMESPACE_BINDING)
+			.Property("Int32Value", BINDING_PROPERTY(&FTestBindingFunction::Int32Value))
+			.Function("SetInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::SetInt32ValueFunction))
+			.Function("GetInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::GetInt32ValueFunction))
+			.Function("OutInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::OutInt32ValueFunction))
+			.Register();
+	}
+};
+
+static FRegisterTestBindingFunction RegisterTestBindingFunction;
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
 
 ## 示例
 

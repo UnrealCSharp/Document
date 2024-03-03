@@ -1,13 +1,14 @@
 ---
+title: 调试
+description: 如何配置和使用调试工具进行调试
+hide_title: true
+slug: debug
 sidebar_position: 1
 custom_edit_url: null
 ---
 
-# 调试
-
-如何配置和使用调试工具进行调试
-
----
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 基础概念
 
@@ -23,12 +24,27 @@ custom_edit_url: null
 
 ## IDE配置
 
-- Visual Studio
-    - [VSMonoDebugger](https://github.com/GordianDotNet/VSMonoDebugger)
-- Rider（推荐）
-    - `Run-Edit Configurations...-Add New Configuration-.NET-Mono Remote`
-- Visual Studio Code
-    - [vscode-mono-debug](https://github.com/microsoft/vscode-mono-debug)
+<Tabs>
+
+<TabItem value="Rider" label="Rider（推荐）" default>
+
+`Run-Edit Configurations...-Add New Configuration-.NET-Mono Remote`
+
+</TabItem>
+
+<TabItem value="Visual Studio" label="Visual Studio">
+
+[VSMonoDebugger](https://github.com/GordianDotNet/VSMonoDebugger)
+
+</TabItem>
+
+<TabItem value="Visual Studio Code" label="Visual Studio Code">
+
+[vscode-mono-debug](https://github.com/microsoft/vscode-mono-debug)
+
+</TabItem>
+
+</Tabs>
 
 ---
 

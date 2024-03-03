@@ -1,12 +1,10 @@
 ---
+title: 编辑器热重载
+description: 编辑器下监听C#文件和资源变更并热重载
+hide_title: true
+slug: hotreload
 sidebar_position: 2
 custom_edit_url: null
----
-
-# 编辑器热重载
-
-编辑器下监听C#文件和资源变更并热重载
-
 ---
 
 ## C#文件变更

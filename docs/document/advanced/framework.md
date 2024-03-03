@@ -1,11 +1,13 @@
 ---
+title: 框架
+description: 架构以及各模块职能
+hide_title: true
+slug: framework
 sidebar_position: 1
 custom_edit_url: null
 ---
 
-# 框架
-
-架构以及各模块职能
+##
 
 - CrossVersion，跨版本支持
 - ThirdParty，Mono头文件以及lib

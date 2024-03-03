@@ -1,11 +1,13 @@
 ---
+title: 目录结构
+description: 文件目录结构及功能
+hide_title: true
+slug: directory
 sidebar_position: 2
 custom_edit_url: null
 ---
 
-# 目录结构
-
-文件目录结构及功能
+##
 
 - Game
     - Proxy，生成代码，不可编辑

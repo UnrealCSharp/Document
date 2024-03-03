@@ -1,13 +1,14 @@
 ---
+title: 覆盖函数
+description: 通过覆盖函数，重写C++和蓝图函数逻辑
+hide_title: true
+slug: override
 sidebar_position: 4
 custom_edit_url: null
 ---
 
-# 覆盖函数
-
-通过覆盖函数，重写C++和蓝图函数逻辑
-
----
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 介绍
 
@@ -24,8 +25,44 @@ custom_edit_url: null
 
 <summary>示例：覆盖函数</summary>
 
+<Tabs>
+
+<TabItem value="C++" label="C++" default>
+
+```cpp
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "TestReflectionFunctionActor.generated.h"
+
+UCLASS()
+class UNREALCSHARPTEST_API ATestReflectionFunctionActor : public AActor
+{
+	GENERATED_BODY()
+
+public:
+	// Sets default values for this actor's properties
+	ATestReflectionFunctionActor();
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetInt32ValueFunction(int32 InInt32Value);
+
+	UFUNCTION(BlueprintCallable)
+	int32 GetInt32ValueFunction() const;
+
+	UFUNCTION(BlueprintCallable)
+	void OutInt32ValueFunction(int32& OutInt32Value) const;
+};
+```
+
+</TabItem>
+
+<TabItem value="C#" label="C#">
+
 ```csharp
-using Script.Common;
+using Script.CoreUObject;
 
 namespace Script.UnrealCSharpTest
 {
@@ -52,6 +89,10 @@ namespace Script.UnrealCSharpTest
     }
 }
 ```
+
+</TabItem>
+
+</Tabs>
 
 </details>
 

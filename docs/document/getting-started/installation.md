@@ -1,13 +1,14 @@
 ---
+title: 安装流程
+description: 如何从零开始生成一个C#工程
+hide_title: true
+slug: installation
 sidebar_position: 1
 custom_edit_url: null
 ---
 
-# 安装流程
-
-如何从零开始生成一个C#工程
-
----
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 环境依赖
 
@@ -20,22 +21,37 @@ custom_edit_url: null
 
 ## 推荐IDE
 
-- [Visual Studio](https://visualstudio.microsoft.com/)
 - [Rider](https://www.jetbrains.com/rider/)
+- [Visual Studio](https://visualstudio.microsoft.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ---
 
 ## 安装插件
 
-- 源码安装方式
-  - `git clone https://github.com/crazytuzi/UnrealCSharp`
-  - 拷贝到`项目`的`Plugins`目录
-- 发布包安装方式
-  - 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
-  - 拷贝到`项目`的`Plugins`目录
-- 子模块（推荐）
-  - [git-submodule](https://git-scm.com/docs/git-submodule)
+<Tabs>
+
+<TabItem value="git submodule" label="子模块（推荐）" default>
+
+[git-submodule](https://git-scm.com/docs/git-submodule)
+
+</TabItem>
+
+<TabItem value="source code" label="源码">
+
+1. `git clone https://github.com/crazytuzi/UnrealCSharp`
+2. 拷贝到`项目`的`Plugins`目录
+
+</TabItem>
+
+<TabItem value="releases" label="发布包">
+
+1. 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
+2. 拷贝到`项目`的`Plugins`目录
+
+</TabItem>
+
+</Tabs>
 
 ---
 
