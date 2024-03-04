@@ -37,6 +37,7 @@ import TabItem from '@theme/TabItem';
     - SlateCore
     - FieldNotification
     - UMG
+    - UnrealCSharpCore
     - `项目`
 - SupportedAssetPath，需要对资源生成C#代码的模块或者插件
   - 推荐至少添加上`项目`
