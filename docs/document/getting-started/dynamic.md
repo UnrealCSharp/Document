@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-通过C#可以动态生成UClass，UStruct和UEnum，并且不需要蓝图载体。
+通过C#可以动态生成UClass，UInterface，UStruct和UEnum，并且不需要蓝图载体。
 
 ---
 
@@ -258,6 +258,57 @@ namespace Script.CoreUObject
         }
 
         private static uint __Int32Value = 0;
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
+
+## UInterface
+
+不支持继承蓝图接口。
+
+<details>
+
+<summary>示例：UInterface</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp
+using Script.Library;
+using Script.Dynamic;
+
+namespace Script.CoreUObject
+{
+    [UInterface]
+    [PathName("/Script/CoreUObject.TestDynamicInterface")]
+    public partial class UTestDynamicInterface : UInterface, IStaticClass
+    {
+        public new static UClass StaticClass()
+        {
+            return UObjectImplementation.UObject_StaticClassImplementation("/Script/CoreUObject.TestDynamicInterface");
+        }
+    }
+
+    [PathName("/Script/CoreUObject.TestDynamicInterface")]
+    public interface ITestDynamicInterface : IInterface
+    {
+        [UFunction, BlueprintImplementableEvent]
+        public void SetInt32ValueFunction(int InInt32Value);
+
+        [UFunction, BlueprintImplementableEvent]
+        public int GetInt32ValueFunction();
+
+        [UFunction, BlueprintImplementableEvent]
+        public void OutInt32ValueFunction(ref int OutInt32Value);
     }
 }
 ```

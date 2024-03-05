@@ -34,25 +34,25 @@ import TabItem from '@theme/TabItem';
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "TestReflectionFunctionActor.generated.h"
+#include "TestCSharpFunctionActor.generated.h"
 
 UCLASS()
-class UNREALCSHARPTEST_API ATestReflectionFunctionActor : public AActor
+class UNREALCSHARPTEST_API ATestCSharpFunctionActor : public AActor
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this actor's properties
-	ATestReflectionFunctionActor();
+	ATestCSharpFunctionActor();
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetInt32ValueFunction(int32 InInt32Value);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	int32 GetInt32ValueFunction() const;
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void OutInt32ValueFunction(int32& OutInt32Value) const;
 };
 ```
