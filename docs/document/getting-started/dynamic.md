@@ -288,7 +288,7 @@ using Script.Dynamic;
 
 namespace Script.CoreUObject
 {
-    [UInterface]
+    [UInterface, MinimalAPI, Blueprintable, BlueprintType, IsBlueprintBase("true")]
     [PathName("/Script/CoreUObject.TestDynamicInterface")]
     public partial class UTestDynamicInterface : UInterface, IStaticClass
     {
@@ -301,13 +301,13 @@ namespace Script.CoreUObject
     [PathName("/Script/CoreUObject.TestDynamicInterface")]
     public interface ITestDynamicInterface : IInterface
     {
-        [UFunction, BlueprintImplementableEvent]
+        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
         public void SetInt32ValueFunction(int InInt32Value);
 
-        [UFunction, BlueprintImplementableEvent]
+        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
         public int GetInt32ValueFunction();
 
-        [UFunction, BlueprintImplementableEvent]
+        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
         public void OutInt32ValueFunction(ref int OutInt32Value);
     }
 }
