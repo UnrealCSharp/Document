@@ -22,9 +22,170 @@ import TabItem from '@theme/TabItem';
 
 ---
 
+## UEnum
+
+如果需要标记BlueprintType，即被蓝图使用，需要将UnderlyingType设置为byte。
+
+<details>
+
+<summary>示例：UEnum</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp
+using Script.Dynamic;
+
+namespace Script.CoreUObject
+{
+    [UEnum, BlueprintType]
+    public enum ETestDynamicEnum : byte
+    {
+        TestDynamicZero = 0,
+        TestDynamicOne = 1,
+        TestDynamicTwo = 2
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
+
+## UStruct
+
+<details>
+
+<summary>示例：UStruct</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp
+using Script.Dynamic;
+
+namespace Script.CoreUObject
+{
+    [UStruct, BlueprintType]
+    public partial class FTestDynamicStruct
+    {
+        [UProperty, BlueprintReadWrite]
+        public int Value { get; set; }
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
+
+## UClass
+
+约定了命令规范，对于动态蓝图类，需要以`_C`结尾。
+
+<details>
+
+<summary>示例：UClass</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp
+using Script.Dynamic;
+using Script.Engine;
+
+namespace Script.CoreUObject
+{
+    [UClass]
+    public partial class ATestRawDynamicFunctionActor : AActor, ITestDynamicInterface
+    {
+        public ATestRawDynamicFunctionActor()
+        {
+            Int32Value = 12;
+        }
+
+        [UProperty]
+        public int Int32Value { get; set; }
+
+        [UFunction]
+        public void SetInt32ValueFunction(int InInt32Value)
+        {
+            Int32Value = InInt32Value;
+        }
+
+        [UFunction]
+        public int GetInt32ValueFunction()
+        {
+            return Int32Value;
+        }
+
+        [UFunction]
+        public void OutInt32ValueFunction(ref int OutInt32Value)
+        {
+            OutInt32Value = Int32Value;
+        }
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
+
+## UInterface
+
+不支持继承蓝图接口。
+
+<details>
+
+<summary>示例：UInterface</summary>
+
+<Tabs>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp
+using Script.Dynamic;
+
+namespace Script.CoreUObject
+{
+    [UInterface, MinimalAPI, Blueprintable, BlueprintType, IsBlueprintBase("true")]
+    public partial class UTestDynamicInterface : UInterface
+    {
+    }
+
+    public interface ITestDynamicInterface : IInterface
+    {
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+---
+
 ## 变量
 
-同[反射](reflection.md)中，动态类的变量也是[Properties](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties)，而非[Fields](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields)，并且为了性能优化，需要额外定义一个`uint`类型的加上`__`前缀的静态变量。
+同[反射](reflection.md)中，动态类的变量也是[Properties](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties)，而非[Fields](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields)。
 
 <details>
 
@@ -36,14 +197,7 @@ import TabItem from '@theme/TabItem';
 
 ```csharp
 [UProperty]
-public int Value
-{
-    get => FPropertyImplementation.FProperty_GetStructInt32PropertyImplementation(GarbageCollectionHandle, __Value);
-
-    set => FPropertyImplementation.FProperty_SetStructInt32PropertyImplementation(GarbageCollectionHandle, __Value, value);
-}
-
-private static uint __Value = 0;
+public int Int32Value { get; set; }
 ```
 
 </TabItem>
@@ -83,233 +237,6 @@ public int GetInt32ValueFunction()
 public void OutInt32ValueFunction(ref int OutInt32Value)
 {
     OutInt32Value = Int32Value;
-}
-```
-
-</TabItem>
-
-</Tabs>
-
-</details>
-
----
-
-## UEnum
-
-如果需要标记BlueprintType，即被蓝图使用，需要将UnderlyingType设置为byte。
-
-<details>
-
-<summary>示例：UEnum</summary>
-
-<Tabs>
-
-<TabItem value="C#" label="C#" default>
-
-```csharp
-using Script.Dynamic;
-
-namespace Script.CoreUObject
-{
-    [UEnum, BlueprintType]
-    [PathName("/Script/CoreUObject.ETestDynamicEnum")]
-    public enum ETestDynamicEnum : byte
-    {
-        TestDynamicZero = 0,
-        TestDynamicOne = 1,
-        TestDynamicTwo = 2
-    }
-}
-```
-
-</TabItem>
-
-</Tabs>
-
-</details>
-
----
-
-## UStruct
-
-目前有一些比较繁琐的定义，后续会提供编辑器创建功能。
-
-<details>
-
-<summary>示例：UStruct</summary>
-
-<Tabs>
-
-<TabItem value="C#" label="C#" default>
-
-```csharp
-using Script.Dynamic;
-using Script.Library;
-
-namespace Script.CoreUObject
-{
-    [UStruct, BlueprintType]
-    [PathName("/Script/CoreUObject.TestDynamicStruct")]
-    public class FTestDynamicStruct : IStaticStruct, IGarbageCollectionHandle
-    {
-        public static UScriptStruct StaticStruct()
-        {
-            return UStructImplementation.UStruct_StaticStructImplementation("/Script/CoreUObject.TestDynamicStruct");
-        }
-
-        public FTestDynamicStruct() =>
-            UStructImplementation.UStruct_RegisterImplementation(this, Utils.GetPathName(GetType()));
-
-        ~FTestDynamicStruct() =>
-            UStructImplementation.UStruct_UnRegisterImplementation(GarbageCollectionHandle);
-
-        public static bool operator ==(FTestDynamicStruct A, FTestDynamicStruct B) =>
-            UStructImplementation.UStruct_IdenticalImplementation(StaticStruct().GarbageCollectionHandle,
-                A?.GarbageCollectionHandle ?? nint.Zero, B?.GarbageCollectionHandle ?? nint.Zero);
-
-        public static bool operator !=(FTestDynamicStruct A, FTestDynamicStruct B) =>
-            !UStructImplementation.UStruct_IdenticalImplementation(StaticStruct().GarbageCollectionHandle,
-                A?.GarbageCollectionHandle ?? nint.Zero, B?.GarbageCollectionHandle ?? nint.Zero);
-
-        public override bool Equals(object Other) => this == Other as FTestDynamicStruct;
-
-        public override int GetHashCode() => (int)GarbageCollectionHandle;
-
-        [UProperty, BlueprintReadWrite]
-        public int Value
-        {
-            get => FPropertyImplementation.FProperty_GetStructInt32PropertyImplementation(GarbageCollectionHandle, __Value);
-
-            set => FPropertyImplementation.FProperty_SetStructInt32PropertyImplementation(GarbageCollectionHandle, __Value, value);
-        }
-
-        private static uint __Value = 0;
-
-        public nint GarbageCollectionHandle { get; set; }
-    }
-}
-```
-
-</TabItem>
-
-</Tabs>
-
-</details>
-
----
-
-## UClass
-
-约定了命令规范，对于动态蓝图类，需要以`_C`结尾。
-
-<details>
-
-<summary>示例：UClass</summary>
-
-<Tabs>
-
-<TabItem value="C#" label="C#" default>
-
-```csharp
-using Script.Dynamic;
-using Script.Engine;
-using Script.Library;
-
-namespace Script.CoreUObject
-{
-    [UClass]
-    [PathName("/Script/CoreUObject.TestRawDynamicFunctionActor")]
-    public class ATestRawDynamicFunctionActor : AActor, IStaticClass
-    {
-        public ATestRawDynamicFunctionActor()
-        {
-            Int32Value = 12;
-        }
-
-        [UProperty]
-        public int Int32Value
-        {
-            get => FPropertyImplementation.FProperty_GetObjectInt32PropertyImplementation(GarbageCollectionHandle, __Int32Value);
-
-            set => FPropertyImplementation.FProperty_SetObjectInt32PropertyImplementation(GarbageCollectionHandle, __Int32Value, value);
-        }
-
-        public new static UClass StaticClass()
-        {
-            return UObjectImplementation.UObject_StaticClassImplementation("/Script/CoreUObject.TestRawDynamicFunctionActor");
-        }
-
-        [UFunction]
-        public void SetInt32ValueFunction(int InInt32Value)
-        {
-            Int32Value = InInt32Value;
-        }
-
-        [UFunction]
-        public int GetInt32ValueFunction()
-        {
-            return Int32Value;
-        }
-
-        [UFunction]
-        public void OutInt32ValueFunction(ref int OutInt32Value)
-        {
-            OutInt32Value = Int32Value;
-        }
-
-        private static uint __Int32Value = 0;
-    }
-}
-```
-
-</TabItem>
-
-</Tabs>
-
-</details>
-
----
-
-## UInterface
-
-不支持继承蓝图接口。
-
-<details>
-
-<summary>示例：UInterface</summary>
-
-<Tabs>
-
-<TabItem value="C#" label="C#" default>
-
-```csharp
-using Script.Library;
-using Script.Dynamic;
-
-namespace Script.CoreUObject
-{
-    [UInterface, MinimalAPI, Blueprintable, BlueprintType, IsBlueprintBase("true")]
-    [PathName("/Script/CoreUObject.TestDynamicInterface")]
-    public partial class UTestDynamicInterface : UInterface, IStaticClass
-    {
-        public new static UClass StaticClass()
-        {
-            return UObjectImplementation.UObject_StaticClassImplementation("/Script/CoreUObject.TestDynamicInterface");
-        }
-    }
-
-    [PathName("/Script/CoreUObject.TestDynamicInterface")]
-    public interface ITestDynamicInterface : IInterface
-    {
-        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
-        public void SetInt32ValueFunction(int InInt32Value);
-
-        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
-        public int GetInt32ValueFunction();
-
-        [UFunction, BlueprintCallable, BlueprintImplementableEvent]
-        public void OutInt32ValueFunction(ref int OutInt32Value);
-    }
 }
 ```
 
