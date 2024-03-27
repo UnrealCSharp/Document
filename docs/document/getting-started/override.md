@@ -20,6 +20,8 @@ import TabItem from '@theme/TabItem';
 
 1. 通过[Partial](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)，新建一个函数所属类的Partial类，并且标记`Override`
 2. 声明一个拥有相同函数签名的函数，并且同样需要标记`Override`
+    - 普通函数：C++或蓝图函数名`Test`，C#函数名`Test`
+    - RPC函数：C++或蓝图函数名`Server_Test`，C#函数名`Server_Test_Implementation`
 
 <details>
 
