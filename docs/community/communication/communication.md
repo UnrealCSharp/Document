@@ -9,6 +9,6 @@ custom_edit_url: null
 ##
 
 - [QQ群](https://qm.qq.com/q/JW43uTiOk4)
-- [Discord](https://discord.gg/UEYSugEJ)
+- [Discord](https://discord.gg/mPVWhRqxC7)
 
 ---
