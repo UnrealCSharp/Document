@@ -3,7 +3,7 @@ title: 热更新
 description: Runtime下热更新C#变更
 hide_title: true
 slug: hotupdate
-sidebar_position: 3
+sidebar_position: 4
 custom_edit_url: null
 ---
 

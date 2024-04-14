@@ -55,12 +55,6 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-## 配置导出项
-
-- 参考[配置](configuration.md)
-
----
-
 ## 生成C#工程
 
 - 点击`Generator Code`

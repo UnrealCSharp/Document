@@ -3,7 +3,7 @@ title: 覆盖函数
 description: 通过覆盖函数，重写C++和蓝图函数逻辑
 hide_title: true
 slug: override
-sidebar_position: 4
+sidebar_position: 3
 custom_edit_url: null
 ---
 

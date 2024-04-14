@@ -3,7 +3,7 @@ title: 调试
 description: 如何配置和使用调试工具进行调试
 hide_title: true
 slug: debug
-sidebar_position: 1
+sidebar_position: 2
 custom_edit_url: null
 ---
 
@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## 项目配置
 
-参考[配置](../getting-started/configuration.md)
+参考[配置](../guides/configuration/runtime)
 
 ---
 

@@ -3,7 +3,7 @@ title: 动态类
 description: 不需要蓝图载体的动态类
 hide_title: true
 slug: dynamic
-sidebar_position: 6
+sidebar_position: 5
 custom_edit_url: null
 ---
 

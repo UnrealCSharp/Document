@@ -3,7 +3,7 @@ title: 编辑器热重载
 description: 编辑器下监听C#文件和资源变更并热重载
 hide_title: true
 slug: hotreload
-sidebar_position: 2
+sidebar_position: 3
 custom_edit_url: null
 ---
 
@@ -15,6 +15,6 @@ custom_edit_url: null
 
 ## 资源变更
 
-当发生资源变更（增加，删除，修改和重命名）时，如果该资源类型以及该资源所属模块或插件在[配置](../getting-started/configuration.md)中匹配成功，则会新建或者覆盖对应C#文件，并且触发C#编译。
+当发生资源变更（增加，删除，修改和重命名）时，如果该资源类型以及该资源所属模块或插件在[配置](../guides/configuration/editor)中匹配成功，则会新建或者覆盖对应C#文件，并且触发C#编译。
 
 ---

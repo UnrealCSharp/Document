@@ -3,7 +3,7 @@ title: 静态导出
 description: 导出未被标记反射的类，变量和函数
 hide_title: true
 slug: binding
-sidebar_position: 5
+sidebar_position: 4
 custom_edit_url: null
 ---
 

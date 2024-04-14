@@ -3,7 +3,7 @@ title: 反射
 description: 介绍对于UE反射的支持，变量访问和函数调用
 hide_title: true
 slug: reflection
-sidebar_position: 3
+sidebar_position: 2
 custom_edit_url: null
 ---
 
@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-通过UE提供的反射，插件会根据[配置](configuration.md)生成指定模块和插件下的类，结构体，枚举，以及资源类型。
+通过UE提供的反射，插件会根据[配置](../guides/configuration/editor)生成指定模块和插件下的类，结构体，枚举，以及资源类型。
 
 ---
 
