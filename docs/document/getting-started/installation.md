@@ -57,7 +57,22 @@ import TabItem from '@theme/TabItem';
 
 ## 生成C#工程
 
+<Tabs>
+
+<TabItem value="button" label="按钮（推荐）" default>
+
 - 点击`Generator Code`
 - `项目/Script`即为C#工程目录
+
+</TabItem>
+
+<TabItem value="command" label="命令">
+
+- `UnrealCSharp.Editor.Generator`
+- `项目/Script`即为C#工程目录
+
+</TabItem>
+
+</Tabs>
 
 ---

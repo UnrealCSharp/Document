@@ -3,7 +3,7 @@ title: 调试
 description: 如何配置和使用调试工具进行调试
 hide_title: true
 slug: debug
-sidebar_position: 2
+sidebar_position: 3
 custom_edit_url: null
 ---
 

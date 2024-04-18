@@ -3,7 +3,7 @@ title: 编辑器热重载
 description: 编辑器下监听C#文件和资源变更并热重载
 hide_title: true
 slug: hotreload
-sidebar_position: 3
+sidebar_position: 4
 custom_edit_url: null
 ---
 
