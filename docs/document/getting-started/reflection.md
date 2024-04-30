@@ -270,7 +270,7 @@ namespace Script.UnrealCSharpTest
 
 </TabItem>
 
-<TabItem value="UObject template" label="UObject模板">
+<TabItem value="UObject template" label="模板">
 
 | C++               | C#                                		|
 | --------          | --------                          		|
@@ -280,6 +280,7 @@ namespace Script.UnrealCSharpTest
 | TLazyObjectPtr    | Script.CoreUObject.TLazyObjectPtr`1    	|
 | TSoftObjectPtr    | Script.CoreUObject.TSoftObjectPtr`1    	|
 | TSoftClassPtr     | Script.CoreUObject.TSoftClassPtr`1     	|
+| TOptional 		| Script.CoreUObject.TOptional`1 			|
 
 </TabItem>
 
