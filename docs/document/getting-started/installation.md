@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## 环境依赖
 
-- .NET 7及以上版本
+- .NET 8及以上版本
   - Windows上可通过Visual Studio Installer直接安装
   - macOS上可参考[Install .NET on macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
 - [Mono](https://github.com/dotnet/runtime)，插件已内置
@@ -33,7 +33,8 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="git submodule" label="子模块（推荐）" default>
 
-[git-submodule](https://git-scm.com/docs/git-submodule)
+1. [git-submodule](https://git-scm.com/docs/git-submodule)
+2. 初始化[Mono](https://github.com/crazytuzi/Mono)
 
 </TabItem>
 
@@ -41,6 +42,7 @@ import TabItem from '@theme/TabItem';
 
 1. `git clone https://github.com/crazytuzi/UnrealCSharp`
 2. 拷贝到`项目`的`Plugins`目录
+3. 初始化[Mono](https://github.com/crazytuzi/Mono)
 
 </TabItem>
 
@@ -48,6 +50,7 @@ import TabItem from '@theme/TabItem';
 
 1. 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
 2. 拷贝到`项目`的`Plugins`目录
+3. 初始化[Mono](https://github.com/crazytuzi/Mono)
 
 </TabItem>
 

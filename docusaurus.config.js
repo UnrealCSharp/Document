@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'UnrealCSharp',
-  tagline: '基于.NET 7（Mono）的UE下C#编程插件',
+  tagline: '基于.NET 8（Mono）的UE下C#编程插件',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
