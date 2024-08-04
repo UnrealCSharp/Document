@@ -138,6 +138,26 @@ static FRegisterTestBindingFunction RegisterTestBindingFunction;
 
 ---
 
+## 通过UHT生成
+
+通过UHT，根据[配置](../guides/configuration/editor)的模块或者插件，自动生成静态绑定代码。
+
+<details>
+
+<summary>示例：引用静态绑定文件</summary>
+
+```cpp
+#if WITH_BINDING
+#include "Binding/Class/PreHeader.h"
+#include "Engine.header.inl"
+#include "UMG.header.inl"
+#endif
+```
+
+</details>
+
+---
+
 ## 示例
 
 ```Source/UnrealCSharp/Private/Domain/InternalCall```下有不少示例，如[FRegisterVector](https://github.com/crazytuzi/UnrealCSharp/blob/main/Source/UnrealCSharp/Private/Domain/InternalCall/FRegisterVector.cpp)。
