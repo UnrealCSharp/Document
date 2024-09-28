@@ -12,6 +12,7 @@ custom_edit_url: null
 - PublishDirectory，DLL生成目录，默认为Script
 - UEName，UE程序集名
 - GameName，Game程序集名
+- CustomProjects，自定义程序集
 
 ---
 
