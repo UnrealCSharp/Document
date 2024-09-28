@@ -7,6 +7,12 @@ sidebar_position: 2
 custom_edit_url: null
 ---
 
+### Publish
+
+- PublishDirectory，DLL生成目录，默认为Script
+- UEName，UE程序集名
+- GameName，Game程序集名
+
 ### Bind
 
 - BindClass，需要预先绑定的类型，可用于绑定CDO，比如UBlueprintFunctionLibrary

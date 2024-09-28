@@ -17,6 +17,7 @@ custom_edit_url: null
 
 ### Generator
 
+- ScriptDirectory，脚本目录，默认为Script
 - bEnableCompiled，是否开启编译，默认开启
 - bEnableAssetChanged，是否开启监听资源变更，默认开启
 - bEnableDirectoryChanged，是否开启监听C#文件变更，默认开启
