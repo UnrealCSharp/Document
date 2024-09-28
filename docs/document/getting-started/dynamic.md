@@ -166,7 +166,7 @@ using Script.Dynamic;
 
 namespace Script.CoreUObject
 {
-    [UInterface, MinimalAPI, Blueprintable, BlueprintType, IsBlueprintBase("true")]
+    [UInterface, Blueprintable]
     public partial class UTestDynamicInterface : UInterface
     {
     }
