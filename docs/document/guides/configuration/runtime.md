@@ -13,6 +13,14 @@ custom_edit_url: null
 - UEName，UE程序集名
 - GameName，Game程序集名
 
+---
+
+### Domain
+
+- AssemblyLoader，自定义程序集加载规则
+
+---
+
 ### Bind
 
 - BindClass，需要预先绑定的类型，可用于绑定CDO，比如UBlueprintFunctionLibrary
