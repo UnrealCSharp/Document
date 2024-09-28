@@ -151,7 +151,7 @@ namespace Script.CoreUObject
 
 ## UInterface
 
-不支持继承蓝图接口。类名需要`U`前缀，文件名不需要`U`前缀。
+不支持继承蓝图接口。接口名需要`I`前缀，文件名不需要`I`前缀。
 
 <details>
 
@@ -167,10 +167,6 @@ using Script.Dynamic;
 namespace Script.CoreUObject
 {
     [UInterface, Blueprintable]
-    public partial class UTestDynamicInterface : UInterface
-    {
-    }
-
     public interface ITestDynamicInterface : IInterface
     {
     }
