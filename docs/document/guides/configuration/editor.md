@@ -36,6 +36,7 @@ custom_edit_url: null
     - UMG
     - UnrealCSharpCore
     - `项目`
+- bIsGenerateAsset，是否生成资源类型，默认开启，当确认不需要生成资源类型时，可关闭，用于加快生成速度
 - SupportedAssetPath，需要对资源生成C#代码的模块或者插件
   - 默认添加`项目`
 - SupportedAssetClass，需要对资源生成C#代码的资源类型
