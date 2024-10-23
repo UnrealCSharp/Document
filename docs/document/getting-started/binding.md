@@ -51,8 +51,7 @@ struct FRegisterRawTestEnum
 		TBindingEnumBuilder<ERawTestEnum>()
 			.Enumerator("RawTestEnumZero", ERawTestEnum::RawTestEnumZero)
 			.Enumerator("RawTestEnumOne", ERawTestEnum::RawTestEnumOne)
-			.Enumerator("RawTestEnumTwo", ERawTestEnum::RawTestEnumTwo)
-			.Register();
+			.Enumerator("RawTestEnumTwo", ERawTestEnum::RawTestEnumTwo);
 	}
 };
 
@@ -122,8 +121,7 @@ struct FRegisterTestBindingFunction
 			.Property("Int32Value", BINDING_PROPERTY(&FTestBindingFunction::Int32Value))
 			.Function("SetInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::SetInt32ValueFunction))
 			.Function("GetInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::GetInt32ValueFunction))
-			.Function("OutInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::OutInt32ValueFunction))
-			.Register();
+			.Function("OutInt32ValueFunction", BINDING_FUNCTION(&FTestBindingFunction::OutInt32ValueFunction));
 	}
 };
 
