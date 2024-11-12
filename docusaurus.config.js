@@ -32,8 +32,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -112,6 +112,13 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ["csharp"]
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '8NTM3K2LS3',
+        // Public API key: it is safe to commit it
+        apiKey: 'fb4452f34ab967b1f15400fb9560939e',
+        indexName: 'unrealcsharpio',
       },
     }),
 };
