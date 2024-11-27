@@ -31,26 +31,18 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="git submodule" label="子模块（推荐）" default>
+<TabItem value="source code" label="源码（推荐）">
 
-1. [git-submodule](https://git-scm.com/docs/git-submodule)
-2. 初始化[Mono](https://github.com/crazytuzi/Mono)
-
-</TabItem>
-
-<TabItem value="source code" label="源码">
-
-1. `git clone https://github.com/crazytuzi/UnrealCSharp`
+1. `git clone --recurse-submodule https://github.com/crazytuzi/UnrealCSharp`
 2. 拷贝到`项目`的`Plugins`目录
-3. 初始化[Mono](https://github.com/crazytuzi/Mono)
 
 </TabItem>
 
 <TabItem value="releases" label="发布包">
 
 1. 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
-2. 拷贝到`项目`的`Plugins`目录
-3. 初始化[Mono](https://github.com/crazytuzi/Mono)
+2. 下载[Mono](https://github.com/crazytuzi/Mono)和[SourceCodeGenerator](https://github.com/crazytuzi/SourceCodeGenerator)，放到对应目录
+3. 拷贝到`项目`的`Plugins`目录
 
 </TabItem>
 

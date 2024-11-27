@@ -208,7 +208,7 @@ public int Int32Value { get; set; }
 
 ## 函数
 
-对于引用类型，只有ref参数，没有out参数。如果函数还会被其他蓝图调用，需要同时标记BlueprintCallable和BlueprintNativeEvent。
+对于引用类型，只有ref参数，没有out参数。如果函数还会被其他蓝图调用，需要同时标记BlueprintCallable和BlueprintImplementableEvent。
 
 <details>
 
@@ -219,19 +219,19 @@ public int Int32Value { get; set; }
 <TabItem value="C#" label="C#" default>
 
 ```csharp
-[UFunction, BlueprintCallable, BlueprintNativeEvent]
+[UFunction, BlueprintCallable, BlueprintImplementableEvent]
 public void SetInt32ValueFunction(int InInt32Value)
 {
     Int32Value = InInt32Value;
 }
 
-[UFunction, BlueprintCallable, BlueprintNativeEvent]
+[UFunction, BlueprintCallable, BlueprintImplementableEvent]
 public int GetInt32ValueFunction()
 {
     return Int32Value;
 }
 
-[UFunction, BlueprintCallable, BlueprintNativeEvent]
+[UFunction, BlueprintCallable, BlueprintImplementableEvent]
 public void OutInt32ValueFunction(ref int OutInt32Value)
 {
     OutInt32Value = Int32Value;

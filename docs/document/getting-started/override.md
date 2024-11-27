@@ -14,6 +14,12 @@ import TabItem from '@theme/TabItem';
 
 对于标记有BlueprintImplementableEvent或者BlueprintNativeEvent的C++和蓝图函数，能够被C#重写函数逻辑。
 
+:::warning
+
+UE5.5开始对C++类BlueprintNativeEvent函数做了改动，插件从UE5.5开始不再支持覆盖C++类BlueprintNativeEvent函数，参看[Change the code generation of UHT for BP implementable events to check for any script implementations of the event.](https://github.com/EpicGames/UnrealEngine/commit/9a428198ab8616a896de16f110caf09491a8ece9)。
+
+:::
+
 ---
 
 ## 流程
@@ -48,13 +54,13 @@ public:
 	ATestCSharpFunctionActor();
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SetInt32ValueFunction(int32 InInt32Value);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	int32 GetInt32ValueFunction() const;
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OutInt32ValueFunction(int32& OutInt32Value) const;
 };
 ```
