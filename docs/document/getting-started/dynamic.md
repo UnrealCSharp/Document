@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## 基础概念
 
-在[反射](reflection.md)中，有介绍C++中Package和C#中Namespace的映射关系，对于动态类来说，namespace被限制为一定是`Script.CoreUObject`，也就是说，动态类都会被创建到`/Script/CoreUObject`中。这样做的目是有一些特殊的情景，如动态类被其他类所引用或者被放置在场景中时，但是由于没有蓝图载体，如果放在其他Package中，会导致序列化失败。其中UClassAttribute，UStructAttribute和UFunctionAttribute继承于OverrideAttribute，换言之，动态类的变量访问和函数调用又会回到反射绑定流程。同时，为了编辑器热重载，文件命名具有规范。
+在[反射](reflection.md)中，有介绍C++中Package和C#中Namespace的映射关系，对于动态类来说，不论namespace是什么，都会被创建到`/Script/CoreUObject`中。这样做的目是有一些特殊的情景，如动态类被其他类所引用或者被放置在场景中时，但是由于没有蓝图载体，如果放在其他Package中，会导致序列化失败。其中UClassAttribute，UStructAttribute和UFunctionAttribute继承于OverrideAttribute，换言之，动态类的变量访问和函数调用又会回到反射绑定流程。同时，为了编辑器热重载，文件命名具有规范。
 
 ---
 
