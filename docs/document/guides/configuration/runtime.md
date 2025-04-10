@@ -20,7 +20,7 @@ custom_edit_url: null
 
 - bEnableCallOverrideFunction，是否开启调用被覆盖函数，默认开启
 - OverrideFunctionNamePrefix，被覆盖函数前缀，默认为空
-- OverrideFunctionNameSuffix，被覆盖函数前缀，默认为_Override
+- OverrideFunctionNameSuffix，被覆盖函数后缀，默认为_Override
 
 ---
 
