@@ -42,7 +42,7 @@ enum ERawTestEnum
 <TabItem value="binding" label="binding">
 
 ```cpp
-BINDING_PROJECT_ENUM(ERawTestEnum)
+BINDING_ENUM(ERawTestEnum)
 
 struct FRegisterRawTestEnum
 {
@@ -111,7 +111,7 @@ public:
 <TabItem value="binding" label="binding">
 
 ```cpp
-BINDING_PROJECT_CLASS(FTestBindingFunction)
+BINDING_CLASS(FTestBindingFunction)
 
 struct FRegisterTestBindingFunction
 {
