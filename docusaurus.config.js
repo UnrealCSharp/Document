@@ -121,6 +121,16 @@ const config = {
         indexName: 'unrealcsharpio',
       },
     }),
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+    experimental_faster: {
+      ssgWorkerThreads: true,
+      rspackBundler: true,
+      rspackPersistentCache: true,
+    },
+  },
 };
 
 export default config;
