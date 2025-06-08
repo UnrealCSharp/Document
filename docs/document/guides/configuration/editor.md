@@ -51,7 +51,7 @@ custom_edit_url: null
     - UserDefinedEnum
     - WidgetBlueprint
 - bIsGenerateFunctionComment，是否生成函数注释，默认开启
-- bEnableCompiled，是否开启通过UHT生成静态绑定代码，默认关闭
+- bEnableExport，是否开启通过UHT生成静态绑定代码，默认关闭
 - ExportModule，需要通过UHT生成静态绑定代码的模块或者插件
 
 ---
