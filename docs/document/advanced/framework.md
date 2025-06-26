@@ -7,19 +7,86 @@ sidebar_position: 1
 custom_edit_url: null
 ---
 
-##
+# 框架架构
 
-- CrossVersion，跨版本支持
-- ThirdParty，Mono头文件以及lib
-- UnrealCSharpCore，Runtime和Editor通用功能
-- ScriptCodeGenerator，C#代码生成
-- SourceCodeGenerator，C++代码生成
-- Compiler，C#编译
-- UnrealCSharpEditor，编辑器功能
-- UnrealCSharp，Runtime功能
+UnrealCSharp 是一个完整的C#集成解决方案，为Unreal Engine提供全面的C#开发支持。整个框架由多个核心模块组成，各司其职，协同工作。
+
+## 🏗️ 核心模块
+
+### 🔄 CrossVersion
+**跨版本支持模块**
+- 提供对不同Unreal Engine版本的兼容性支持
+- 处理引擎版本差异，确保代码在多个版本间的稳定性
+
+### 📦 ThirdParty
+**第三方依赖模块**
+- 包含Mono运行时的头文件和库文件
+- 管理外部依赖项，确保编译和运行时的完整性
+
+### ⚙️ UnrealCSharpCore
+**核心功能模块**
+- Runtime和Editor共享的通用功能
+- 提供基础设施和公共服务
+- 是整个框架的基石
 
 ---
+
+## 🛠️ 开发工具模块
+
+### 📝 ScriptCodeGenerator
+**C#代码生成器**
+- 自动生成C#绑定代码
+- 根据UE类型自动创建对应的C#接口
+- 保证C#代码与引擎API的同步
+
+### ⚡ SourceCodeGenerator
+**C++代码生成器**
+- 生成必要的C++桥接代码
+- 创建C#与C++之间的互操作层
+- 优化调用性能
+
+### 🔨 Compiler
+**C#编译器模块**
+- 集成的C#代码编译功能
+- 支持热重载和增量编译
+- 提供编译错误诊断
+
+---
+
+## 🎯 运行时模块
+
+### 🎨 UnrealCSharpEditor
+**编辑器功能模块**
+- 专门用于Unreal Engine编辑器环境
+- 提供编辑器工具和界面集成
+- 支持设计时功能和调试工具
+
+### 🚀 UnrealCSharp
+**运行时功能模块**
+- 游戏运行时的核心功能
+- 处理游戏逻辑执行
+- 管理C#脚本的生命周期
+
+---
+
+## 📊 架构图
+
+下图展示了各模块之间的关系和数据流：
 
 ![framework](./img/framework.png)
 
 ---
+
+## 🔄 工作流程
+
+1. **开发阶段**：开发者编写C#代码
+2. **生成阶段**：代码生成器创建绑定代码
+3. **编译阶段**：编译器处理所有C#代码
+4. **运行阶段**：运行时模块执行游戏逻辑
+
+:::info 架构优势
+- **模块化设计**：各模块职责清晰，便于维护和扩展
+- **跨版本兼容**：支持多个UE版本，降低迁移成本
+- **高性能**：优化的调用机制，确保运行效率
+- **开发友好**：完整的工具链支持，提升开发体验
+:::
