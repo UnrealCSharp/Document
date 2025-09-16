@@ -188,6 +188,6 @@ custom_edit_url: null
         8. `General`-`Frameworks and Libraries`-`Embed`选择`Embed & Sign`
         9. `Build`选择`Any IOS Device（arm64）`
         10. `File`-`Project Setting`-`Advanced`-`Custom`选择`Relative to Workspace`
-        11. `Build/Products/Debug-iphones`新建`Mono.embeddendframework`文件夹，拷贝`Mono.framework`到`Mono.embeddendframework`，压缩`Mono.embeddendframework`
+        11. `Build/Products/Debug-iphones`新建`Mono.embeddedframework`文件夹，拷贝`Mono.framework`到`Mono.embeddedframework`，压缩`Mono.embeddedframework`
 
 ---
