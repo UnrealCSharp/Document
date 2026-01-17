@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## 环境依赖
 
-- .NET 8及以上版本
+- .NET 10
   - Windows上可通过Visual Studio Installer直接安装
   - macOS上可参考[Install .NET on macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
 - [Mono](https://github.com/dotnet/runtime)，插件已内置
