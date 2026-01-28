@@ -42,8 +42,16 @@ custom_edit_url: null
 - Host，调试地址
 - Port，调试端口
 
+---
+
 ### Module
 
 - bEnableImmediatelyActive，是否开启直接启动Module，默认开启
+
+---
+
+### Solution
+
+- DotnetVersion，dotnet版本，默认为Latest
 
 ---
