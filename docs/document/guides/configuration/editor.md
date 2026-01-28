@@ -55,3 +55,10 @@ custom_edit_url: null
 - ExportModule，需要通过UHT生成静态绑定代码的模块或者插件
 
 ---
+
+### Solution
+
+- EditorConfiguration，Editor编译配置，默认为Debug
+- RuntimeConfiguration，Runtime编译配置，默认为Release
+
+---
