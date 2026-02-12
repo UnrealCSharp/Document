@@ -8,7 +8,6 @@ custom_edit_url: null
 
 ##
 
-- [[UnrealCircle成都]UnrealCSharp-UE下C#编程插件 | 皮皮](https://www.bilibili.com/video/BV1CC411L7mh)
 - [UnrealCSharp-UE下C#编程插件](https://docs.qq.com/slide/DTGtWYlVaZVZYRHpE)
 - [UnrealCSharp，诚心找小伙伴一起挖新坑](https://zhuanlan.zhihu.com/p/576832337)
 - [开始UnrealCSharp之旅](https://zhuanlan.zhihu.com/p/746757176)
