@@ -26,6 +26,16 @@ custom_edit_url: null
 
 ### Domain
 
+- WindowsScriptDomainType，Windows平台切换CoreCLR或者Mono
+
+- LinuxScriptDomainType，Linux平台切换CoreCLR或者Mono
+
+- MacScriptDomainType，Mac平台切换CoreCLR或者Mono
+
+- AndroidScriptDomainType，Android平台，当前仅支持Mono
+
+- IOSScriptDomainType，IOS平台，当前仅支持Mono
+
 - AssemblyLoader，自定义程序集加载规则
 
 ---

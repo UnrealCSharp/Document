@@ -10,7 +10,7 @@ custom_edit_url: null
 ##
 
 - CrossVersion，跨版本支持
-- ThirdParty，Mono头文件以及lib
+- ThirdParty，CoreCLR和Mono头文件以及lib
 - UnrealCSharpCore，Runtime和Editor通用功能
 - ScriptCodeGenerator，C#代码生成
 - SourceCodeGenerator，C++代码生成

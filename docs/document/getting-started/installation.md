@@ -15,6 +15,7 @@ import TabItem from '@theme/TabItem';
 - .NET 10
   - Windows上可通过Visual Studio Installer直接安装
   - macOS上可参考[Install .NET on macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
+- [CoreCLR](https://github.com/dotnet/runtime)，插件已内置
 - [Mono](https://github.com/dotnet/runtime)，插件已内置
 
 ---
@@ -41,7 +42,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="releases" label="发布包">
 
 1. 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
-2. 下载[Mono](https://github.com/crazytuzi/Mono)和[SourceCodeGenerator](https://github.com/crazytuzi/SourceCodeGenerator)，放到对应目录
+2. 下载[CoreCLR](https://github.com/crazytuzi/CoreCLR)，[Mono](https://github.com/crazytuzi/Mono)和[SourceCodeGenerator](https://github.com/crazytuzi/SourceCodeGenerator)，放到对应目录
 3. 拷贝到`项目`的`Plugins`目录
 
 </TabItem>
