@@ -26,11 +26,11 @@ custom_edit_url: null
 
 ### Domain
 
-- WindowsScriptDomainType，Windows平台切换CoreCLR或者Mono
+- WindowsScriptDomainType，Windows平台切换CoreCLR或者Mono，默认为CoreCLR
 
-- LinuxScriptDomainType，Linux平台切换CoreCLR或者Mono
+- LinuxScriptDomainType，Linux平台切换CoreCLR或者Mono，默认为CoreCLR
 
-- MacScriptDomainType，Mac平台切换CoreCLR或者Mono
+- MacScriptDomainType，Mac平台切换CoreCLR或者Mono，默认为CoreCLR
 
 - AndroidScriptDomainType，Android平台，当前仅支持Mono
 
