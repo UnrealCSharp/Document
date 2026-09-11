@@ -13,5 +13,6 @@ custom_edit_url: null
 - `UnrealCSharp.Editor.SolutionGenerator`，生成解决方案
 - `UnrealCSharp.Editor.Compile`，编译代码
 - `UnrealCSharp.Editor.Generator`，完整生成
+- `UnrealCSharp.Editor.SetActive`，动态开关
 
 ---

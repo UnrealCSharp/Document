@@ -26,15 +26,15 @@ custom_edit_url: null
 
 ### Domain
 
-- WindowsScriptDomainType，Windows平台切换CoreCLR或者Mono，默认为CoreCLR
+- WindowsScriptDomainType，Windows平台切换CoreCLR，Mono或者LeanCLR，默认为CoreCLR
 
-- LinuxScriptDomainType，Linux平台切换CoreCLR或者Mono，默认为CoreCLR
+- LinuxScriptDomainType，Linux平台切换CoreCLR，Mono或者LeanCLR，默认为CoreCLR
 
-- MacScriptDomainType，Mac平台切换CoreCLR或者Mono，默认为CoreCLR
+- MacScriptDomainType，Mac平台切换CoreCLR，Mono或者LeanCLR，默认为CoreCLR
 
-- AndroidScriptDomainType，Android平台，当前仅支持Mono
+- AndroidScriptDomainType，Android切换Mono或者LeanCLR，默认为Mono
 
-- IOSScriptDomainType，IOS平台，当前仅支持Mono
+- IOSScriptDomainType，IOS切换Mono或者LeanCLR，默认为Mono
 
 - AssemblyLoader，自定义程序集加载规则
 

@@ -17,12 +17,16 @@ custom_edit_url: null
 
 ### Generator
 
+- bIsSkipGenerateScriptCode，是否跳过生成，默认关闭
 - ScriptDirectory，脚本目录，默认为Script
 - bEnableDeleteProxyDirectory，是否删除Proxy目录，默认关闭
 - bEnableDeleteBindingDirectory，是否删除Binding目录，默认关闭
 - bEnableCompiled，是否开启编译，默认开启
 - bEnableAssetChanged，是否开启监听资源变更，默认开启
 - bEnableDirectoryChanged，是否开启监听C#文件变更，默认开启
+- bEnableCompileOnBlueprintCompiled，是否开启当蓝图编译时编译脚本，默认开启
+- bEnableCompileDirtyBlueprintsPreBeginPIE，是否开启PIE前编译脏蓝图，默认开启
+- bEnableCompilePreBeginPIE，是否开启PIE前编译脚本，默认开启
 - bIsSkipGenerateEngineModules，是否跳过引擎侧生成，默认关闭，当确认引擎侧不需要重复生成时，可开启，用于加快生成速度
 - bIsGenerateAllModules，是否全量生成，默认开启，当想要通过SupportedModule自定义生成规则时，可关闭
 - SupportedModule，需要对C++代码生成C#代码的模块或者插件
