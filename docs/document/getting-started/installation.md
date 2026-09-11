@@ -17,6 +17,7 @@ import TabItem from '@theme/TabItem';
   - macOS上可参考[Install .NET on macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
 - [CoreCLR](https://github.com/dotnet/runtime)，插件已内置
 - [Mono](https://github.com/dotnet/runtime)，插件已内置
+- [LeanCLR](https://github.com/focus-creative-games/leanclr)，插件已内置
 
 ---
 
