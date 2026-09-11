@@ -1,8 +1,8 @@
 ---
-title: 命令
+title: 控制台命令
 description: 控制台命令
 hide_title: true
-slug: command
+slug: console
 sidebar_position: 2
 custom_edit_url: null
 ---
