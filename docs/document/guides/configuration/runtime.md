@@ -18,6 +18,7 @@ custom_edit_url: null
 
 ### Override
 
+- bEnableOverrideBlueprintNativeEvent，是否开启覆写蓝图原生事件，默认开启，仅UE5.5及以上有效
 - bEnableCallOverrideFunction，是否开启调用被覆盖函数，默认开启
 - OverrideFunctionNamePrefix，被覆盖函数前缀，默认为空
 - OverrideFunctionNameSuffix，被覆盖函数后缀，默认为_Override
@@ -42,6 +43,7 @@ custom_edit_url: null
 
 ### Bind
 
+- bEnableFieldHash，是否开启字段和函数绑定哈希稳定生成，默认开启
 - BindClass，需要预先绑定的类型，可用于绑定CDO，比如UBlueprintFunctionLibrary
 
 ---

@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="releases" label="发布包">
 
 1. 通过[releases](https://github.com/crazytuzi/UnrealCSharp/releases)下载需要的版本
-2. 下载[CoreCLR](https://github.com/crazytuzi/CoreCLR)，[Mono](https://github.com/crazytuzi/Mono)和[SourceCodeGenerator](https://github.com/crazytuzi/SourceCodeGenerator)，放到对应目录
+2. 下载[CoreCLR](https://github.com/crazytuzi/CoreCLR)，[Mono](https://github.com/crazytuzi/Mono)，[LeanCLR](https://github.com/crazytuzi/backend-leanclr)和[SourceCodeGenerator](https://github.com/crazytuzi/SourceCodeGenerator)，放到对应目录
 3. 拷贝到`项目`的`Plugins`目录
 
 </TabItem>

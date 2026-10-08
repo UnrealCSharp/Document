@@ -58,6 +58,7 @@ custom_edit_url: null
 - bIsGenerateFunctionComment，是否生成函数注释，默认开启
 - bEnableExport，是否开启通过UHT生成静态绑定代码，默认关闭
 - ExportModule，需要通过UHT生成静态绑定代码的模块或者插件
+- ClassBlacklist，不需要通过UHT生成静态绑定代码的类
 
 ---
 
